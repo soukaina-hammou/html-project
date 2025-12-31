@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Soukaina Hammou — Portfolio</title>
+  <meta name="description" content="Professional portfolio showcasing projects, skills and contact information.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Soukaina Hammou</a>
+      <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" role="navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>Hi, I'm Soukaina</h1>
+          <p>Product-focused front-end developer building accessible, performant web experiences.</p>
+          <a class="cta" href="#contact">Work with me</a>
+        </div>
+        <div class="hero-photo">
+          <img src="src/Mr%20Miew.jfif" alt="Portrait of Soukaina Hammou">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About Me</h2>
+      <p>I'm a front-end developer passionate about crafting clean interfaces, responsive layouts and delightful interactions. I focus on performance, accessibility and maintainable code.</p>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://via.placeholder.com/800x400?text=Project+1" alt="Project 1 screenshot">
+          <div class="card-body">
+            <h3>Project One</h3>
+            <p>Responsive web app with emphasis on accessibility and performance.</p>
+            <a href="#" class="link">View case study</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/800x400?text=Project+2" alt="Project 2 screenshot">
+          <div class="card-body">
+            <h3>Project Two</h3>
+            <p>Design system and component library used across multiple products.</p>
+            <a href="#" class="link">View code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://via.placeholder.com/800x400?text=Project+3" alt="Project 3 screenshot">
+          <div class="card-body">
+            <h3>Project Three</h3>
+            <p>Performance-first landing page with progressive enhancement.</p>
+            <a href="#" class="link">View demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 & semantic markup</li>
+        <li>Responsive CSS (Flexbox & Grid)</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Accessibility (a11y)</li>
+        <li>Performance optimization</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send message</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Soukaina Hammou — Built with care</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
