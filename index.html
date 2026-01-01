@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071028" />
     <title>Soukaina Hammou — Portfolio</title>
     <meta
       name="description"
       content="Professional portfolio showcasing projects, skills and contact information."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
         <button
@@ -33,15 +38,17 @@
       </div>
     </header>
 
-    <main>
-      <section id="home" class="hero">
+    <main id="main">
+      <section id="home" class="hero" aria-labelledby="home-heading">
         <div class="container hero-inner">
           <div class="hero-content">
-            <h1>Hi, I'm Soukaina</h1>
-            <p>
-                I am a motivated  .
-            </p>
-            <a class="cta" href="#contact">Work with me</a>
+            <h1 id="home-heading">Hi, I'm Soukaina Hammou</h1>
+            <p class="subtitle">Cybersecurity &amp; Front-end Developer — building secure, accessible web experiences.</p>
+            <p class="lead">I combine security-first thinking with clean UI to build performant web apps and interfaces.</p>
+            <div class="hero-actions">
+              <a class="cta" href="#projects">See my work</a>
+              <a class="cta secondary" href="#contact">Contact me</a>
+            </div>
           </div>
           <div class="hero-photo">
             <img src="src/Mr%20Miew.jfif" alt="Portrait of Soukaina Hammou" />
@@ -49,96 +56,135 @@
         </div>
       </section>
 
-      <section id="about" class="about container">
-        <h2>About Me</h2>
+      <section id="about" class="about container reveal" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
         <p>
-          I'm a front-end developer passionate about crafting clean interfaces,
-          responsive layouts and delightful interactions. I focus on
-          performance, accessibility and maintainable code.
+          I'm a front-end developer and cybersecurity student with a focus on
+          secure-by-design interfaces, accessibility (a11y), and performance.
+          I enjoy turning complex problems into simple, elegant user experiences.
         </p>
       </section>
 
-      <section id="projects" class="projects container">
-        <h2>Selected Projects</h2>
+      <section id="projects" class="projects container" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Selected Projects</h2>
         <div class="grid">
-          <article class="card">
-            <img
-              src="https://via.placeholder.com/800x400?text=Project+1"
-              alt="Project 1 screenshot"
-            />
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/800x400?text=Secure+Dashboard" alt="Secure Dashboard screenshot" />
             <div class="card-body">
-              <h3>Project One</h3>
-              <p>
-                Responsive web app with emphasis on accessibility and
-                performance.
-              </p>
-              <a href="#" class="link">View case study</a>
+              <h3>Secure Dashboard</h3>
+              <p>Dashboard prototype with role-based access, secure auth flows, and audit logging.</p>
+              <div class="card-actions">
+                <a href="#" class="link">Case study</a>
+                <a href="#" class="btn small">Live demo</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
-            <img
-              src="https://via.placeholder.com/800x400?text=Project+2"
-              alt="Project 2 screenshot"
-            />
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/800x400?text=Design+System" alt="Design system screenshot" />
             <div class="card-body">
-              <h3>Project Two</h3>
-              <p>
-                Design system and component library used across multiple
-                products.
-              </p>
-              <a href="#" class="link">View code</a>
+              <h3>Design System</h3>
+              <p>Accessible component library with tokenized theming and performance optimizations.</p>
+              <div class="card-actions">
+                <a href="#" class="link">View source</a>
+                <a href="#" class="btn small">Preview</a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
-            <img
-              src="https://via.placeholder.com/800x400?text=Project+3"
-              alt="Project 3 screenshot"
-            />
+          <article class="card reveal">
+            <img src="https://via.placeholder.com/800x400?text=Landing+Page" alt="Landing page screenshot" />
             <div class="card-body">
-              <h3>Project Three</h3>
-              <p>
-                Performance-first landing page with progressive enhancement.
-              </p>
-              <a href="#" class="link">View demo</a>
+              <h3>Performance Landing</h3>
+              <p>Performance-first landing page with LCP and CLS improvements.</p>
+              <div class="card-actions">
+                <a href="#" class="link">Read write-up</a>
+                <a href="#" class="btn small">Open</a>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="skills" class="skills container">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-          <li>HTML5 & semantic markup</li>
-          <li>Responsive CSS (Flexbox & Grid)</li>
-          <li>JavaScript (ES6+)</li>
-          <li>Accessibility (a11y)</li>
-          <li>Performance optimization</li>
-        </ul>
+      <section id="skills" class="skills container reveal" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <p class="muted">Front-end, security fundamentals, and common tools.</p>
+        <div class="skills-grid">
+          <div class="skill">
+            <div class="skill-head">
+              <strong>HTML &amp; Semantics</strong>
+              <span class="muted">90%</span>
+            </div>
+            <div class="progress" data-progress="90" aria-hidden="true"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <strong>CSS (Flexbox &amp; Grid)</strong>
+              <span class="muted">85%</span>
+            </div>
+            <div class="progress" data-progress="85"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <strong>JavaScript (ES6+)</strong>
+              <span class="muted">80%</span>
+            </div>
+            <div class="progress" data-progress="80"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <strong>Accessibility &amp; a11y</strong>
+              <span class="muted">85%</span>
+            </div>
+            <div class="progress" data-progress="85"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-head">
+              <strong>Security Fundamentals</strong>
+              <span class="muted">75%</span>
+            </div>
+            <div class="progress" data-progress="75"><span></span></div>
+          </div>
+        </div>
       </section>
 
-      <section id="contact" class="contact container">
-        <h2>Contact</h2>
-        <form id="contact-form" novalidate>
-          <label for="name">Name</label>
-          <input id="name" name="name" required />
+      <section id="contact" class="contact container" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <div class="contact-grid">
+          <form id="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-          <button type="submit" class="btn">Send message</button>
-          <p id="form-status" class="form-status" aria-live="polite"></p>
-        </form>
+            <button type="submit" class="btn">Send message</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+
+          <aside class="contact-info" aria-label="Contact information">
+            <p>Prefer messaging? Connect on socials or send an email.</p>
+            <ul class="socials">
+              <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+              <li><a href="#" aria-label="GitHub">GitHub</a></li>
+              <li><a href="#" aria-label="Twitter">Twitter</a></li>
+            </ul>
+            <p class="muted">Availability: open to internships and part-time projects.</p>
+          </aside>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <p>© 2025 Soukaina Hammou — Built with care</p>
+        <p>© 2026 Soukaina Hammou — Built with care</p>
       </div>
     </footer>
 

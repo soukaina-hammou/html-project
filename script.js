@@ -33,6 +33,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Scroll reveal + progress bar animation
+  const observerOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.12 };
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        // animate inner progress bars if present
+        entry.target.querySelectorAll && entry.target.querySelectorAll('.progress').forEach(pb => {
+          const span = pb.querySelector('span');
+          const pct = Number(pb.getAttribute('data-progress') || 0);
+          if (span) span.style.width = pct + '%';
+        });
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe revealables (cards, sections)
+  document.querySelectorAll('.reveal, .card').forEach(el => revealObserver.observe(el));
+
+  // Also animate skills progress on page load if visible
+  document.querySelectorAll('.progress').forEach(pb => {
+    // set initial width 0 (CSS default) and animate when in view via observer
+    // For elements already in view, observer callback will run above and animate them
+  });
+
   // Simple contact form validation & submit handler
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -56,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         status.textContent = "Thanks — your message has been sent.";
         form.reset();
+        // reset progress bars if present (no-op for form, keeps behavior predictable)
       }, 900);
     });
   }
