@@ -74,8 +74,10 @@ body::before{
 .card img{width:100%;height:160px;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.9,.2,1)}
 .card-body{padding:1.15rem}
 .card h3{margin:0 0 0.5rem;color:var(--text)}
+.card h3 i{margin-right:0.5rem;color:var(--accent)}
 .card p{margin:0;color:var(--muted);font-size:0.95rem}
 .card .link{display:inline-block;margin-top:0.75rem;color:var(--accent);text-decoration:none}
+.card .link i{margin-right:0.3rem}
 .card:hover{transform:translateY(-12px);box-shadow:0 0 30px rgba(0,255,102,0.3), 0 20px 40px rgba(0,255,102,0.1);border-color:var(--accent)}
 .card:hover img{transform:scale(1.08)}
 .card-actions{margin-top:0.75rem;display:flex;gap:.6rem;align-items:center}
@@ -91,8 +93,10 @@ body::before{
 
 .contact form{max-width:680px}
 label{display:block;margin-top:1rem;font-size:0.95rem;color:var(--muted)}
+label i{margin-right:0.4rem;color:var(--accent)}
 input, textarea{width:100%;padding:.6rem .75rem;margin-top:.5rem;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
 .btn{margin-top:1rem;padding:.75rem 1rem;background:transparent;border:2px solid var(--accent);color:var(--accent);border-radius:10px;transition:all .25s ease;font-weight:600;box-shadow:0 0 15px rgba(0,255,102,0.15)}
+.btn i{margin-right:0.4rem}
 .btn:hover{background:rgba(0,255,102,0.1);color:white;transform:translateY(-3px);box-shadow:0 0 25px rgba(0,255,102,0.3), 0 10px 20px rgba(0,255,102,0.1);text-shadow:0 0 10px rgba(0,255,102,0.4)}
 .form-status{margin-top:.75rem;color:var(--muted)}
 
@@ -100,7 +104,8 @@ input, textarea{width:100%;padding:.6rem .75rem;margin-top:.5rem;border-radius:1
 .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start}
 .contact-info{background:linear-gradient(135deg, rgba(0,255,102,0.05), rgba(0,180,102,0.02));padding:1rem;border-radius:12px;border:1px solid rgba(0,255,102,0.2);box-shadow:0 0 20px rgba(0,255,102,0.08)}
 .socials{list-style:none;padding:0;margin:1rem 0 0 0;display:flex;gap:.5rem}
-.socials a{color:var(--muted);text-decoration:none;border-bottom:1px dashed transparent}
+.socials a{color:var(--muted);text-decoration:none;border-bottom:1px dashed transparent;display:flex;align-items:center;gap:0.3rem}
+.socials a i{color:var(--accent);font-size:1.2rem}
 .socials a:focus,.socials a:hover{color:var(--text);border-bottom-color:var(--accent)}
 
 .site-footer{padding:2rem 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted)}
@@ -123,6 +128,8 @@ input, textarea{width:100%;padding:.6rem .75rem;margin-top:.5rem;border-radius:1
 .skill{background:transparent;padding:.65rem;border-radius:10px;border:1px solid rgba(0,255,102,0.2);transition:all .3s ease;box-shadow:0 0 15px rgba(0,255,102,0)}
 .skill:hover{border-color:var(--accent);box-shadow:0 0 15px rgba(0,255,102,0.15);background:rgba(0,255,102,0.03)}
 .skill-head{display:flex;justify-content:space-between;align-items:center;font-size:.95rem;margin-bottom:.5rem}
+.skill-title{display:flex;align-items:center;gap:0.6rem;color:var(--text)}
+.skill-title i{color:var(--accent);font-size:1.1rem;min-width:24px}
 .progress{background:rgba(0,255,102,0.08);height:10px;border-radius:999px;overflow:hidden;border:1px solid rgba(0,255,102,0.15);box-shadow:inset 0 0 10px rgba(0,255,102,0.05)}
 .progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#44ff99,var(--accent));background-size:200% 100%;transition:width 1s cubic-bezier(.2,.9,.2,1);box-shadow:0 0 15px rgba(0,255,102,0.5), inset 0 0 10px rgba(0,255,102,0.3)}
 
