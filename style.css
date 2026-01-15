@@ -1,0 +1,118 @@
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --border: #334155;
+    --code-bg: #000000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom right, #1e293b, #0f172a);
+    padding: 100px 20px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.hero-content { max-width: 800px; margin: 0 auto; }
+
+.badge {
+    background: rgba(99, 102, 241, 0.2);
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+h1 { font-size: 3rem; margin: 20px 0; letter-spacing: -1px; }
+
+code {
+    font-family: 'Fira Code', monospace;
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--accent-hover);
+}
+
+/* Grid Layout */
+.container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header { padding: 25px; }
+.card-header h3 { margin: 0 0 10px 0; font-size: 1.4rem; color: var(--accent); }
+.card-header p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
+
+.demo-area {
+    padding: 30px 25px;
+    background: rgba(15, 23, 42, 0.5);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.val { color: var(--text-main); font-weight: 600; }
+
+/* Code Styling */
+.code-block {
+    padding: 15px 25px;
+    background: var(--code-bg);
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+/* UI Elements Styling */
+input[type="text"], input[type="password"], input[type="date"], input[type="number"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-main);
+    color: white;
+    outline: none;
+}
+
+input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3); }
+
+input[type="range"] { accent-color: var(--accent); width: 100%; }
+input[type="color"] { border: none; width: 100%; height: 50px; cursor: pointer; background: none; }
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .input-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input Master Reference</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Documentation v1.0</span>
+            <h1>HTML Input Master Reference</h1>
+            <p>The <code>&lt;input&gt;</code> element is the foundational bridge between user intent and data processing. Mastering its various types is essential for building accessible, high-converting web applications.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="input-grid">
+            
+            <article class="card" data-type="text">
+                <div class="card-header">
+                    <h3>Text Input</h3>
+                    <p>The standard single-line text field used for basic alphanumeric data.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="text" placeholder="Type something..." class="interactive-input">
+                    <div class="feedback">Value: <span class="val">None</span></div>
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="text"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="password">
+                <div class="card-header">
+                    <h3>Password</h3>
+                    <p>Obscures input characters for sensitive information security.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="password" placeholder="Enter password" class="interactive-input">
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="password"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="color">
+                <div class="card-header">
+                    <h3>Color Picker</h3>
+                    <p>Allows users to select a color via the system's native interface.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="color" value="#6366f1" class="interactive-input">
+                    <div class="feedback">HEX: <span class="val">#6366f1</span></div>
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="color"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="range">
+                <div class="card-header">
+                    <h3>Range Slider</h3>
+                    <p>Selects a numeric value from a slider within a specified interval.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="range" min="0" max="100" value="50" class="interactive-input">
+                    <div class="feedback">Intensity: <span class="val">50</span>%</div>
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="range"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="date">
+                <div class="card-header">
+                    <h3>Date Selector</h3>
+                    <p>Triggers a native calendar picker for day/month/year selection.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="date" class="interactive-input">
+                    <div class="feedback">Selected: <span class="val">YYYY-MM-DD</span></div>
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="date"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="number">
+                <div class="card-header">
+                    <h3>Number</h3>
+                    <p>Restricts input to numeric values; supports min, max, and steps.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="number" placeholder="0" class="interactive-input">
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="number"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="file">
+                <div class="card-header">
+                    <h3>File Upload</h3>
+                    <p>Allows users to select one or more files from their storage.</p>
+                </div>
+                <div class="demo-area">
+                    <input type="file" class="interactive-input">
+                    <div class="feedback"><span class="val">No file chosen</span></div>
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="file"&gt;</code>
+                </div>
+            </article>
+
+            <article class="card" data-type="checkbox">
+                <div class="card-header">
+                    <h3>Checkbox</h3>
+                    <p>Toggle states or select multiple options from a set.</p>
+                </div>
+                <div class="demo-area">
+                    <label class="custom-check">
+                        <input type="checkbox" class="interactive-input"> Toggle me
+                    </label>
+                    <div class="feedback">Status: <span class="val">Unchecked</span></div>
+                </div>
+                <div class="code-block">
+                    <code>&lt;input type="checkbox"&gt;</code>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
